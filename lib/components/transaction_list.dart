@@ -23,13 +23,13 @@ class TransactionList extends StatelessWidget {
                   style: Theme.of(context).textTheme.headline6,
                 ),
                 SizedBox(height: 20),
-                // Container(
-                //   height: 130,
-                //   child: Image.asset(
-                //     '../assets/images/waiting.png',
-                //     fit: BoxFit.cover,
-                //   ),
-                // ),
+                Container(
+                  height: 130,
+                  child: Image.asset(
+                    '../assets/images/costs.png',
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ],
             )
           : ListView.builder(
@@ -62,7 +62,6 @@ class TransactionList extends StatelessWidget {
                     trailing: IconButton(
                       icon: Icon(Icons.delete),
                       color: Theme.of(context).errorColor,
-                      // onPressed: () {},
                       onPressed: () => onRemove(tr.id),
                     ),
                   ),
