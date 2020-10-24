@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterprojectfiap/utils/app_routes.dart';
 
 import 'categories_screen.dart';
 import 'favorite_screen.dart';
@@ -6,6 +7,9 @@ import 'costs_detail_screen.dart';
 import 'gastos.dart';
 import '../components/main_drawer.dart';
 import '../models/meal.dart';
+import '../utils/app_routes.dart';
+
+
 
 class TabsScreen extends StatefulWidget {
   final List<Meal> favoriteMeals;
@@ -34,7 +38,6 @@ class _TabsScreenState extends State<TabsScreen> {
       },
       {
         'title': 'Meus Gastos da Viagem',
-        // 'screen': GastosPage(),
         'screen': CostsDetailScreen(),
       },
     ];
@@ -50,6 +53,17 @@ class _TabsScreenState extends State<TabsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+         actions: <Widget>[
+          IconButton(icon: Icon(
+            Icons.attach_money, 
+            ), 
+            // onPressed: ()=> print("indo pra pagina meus gastos"),
+            onPressed: ()=> CostsDetail,
+          // onPressed: () => Navigator.of(context).pushReplacementNamed(AppRoutes.CostsDetailScreen), 
+          // onPressed: () => CostsDetailScreen, 
+
+          )   
+            ],
         title: Text(
           _screens[_selectedScreenIndex]['title'],
         ),

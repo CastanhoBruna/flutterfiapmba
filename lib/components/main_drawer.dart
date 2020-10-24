@@ -21,7 +21,6 @@ class MainDrawer extends StatelessWidget {
     );
   }
 
-// TODO - implementar click botao roteiros favoritos e botao de gastos // manter configuracoes ??? 
 
   @override
   Widget build(BuildContext context) {

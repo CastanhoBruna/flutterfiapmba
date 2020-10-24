@@ -20,7 +20,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  GastosPage gastospage = GastosPage(); 
+  // GastosPage gastospage = GastosPage(); 
   Settings settings = Settings();
   List<Meal> _availableMeals = DUMMY_MEALS;
   List<Meal> _favoriteMeals = [];
@@ -75,8 +75,8 @@ class _MyAppState extends State<MyApp> {
         AppRoutes.CATEGORIES_MEALS: (ctx) => CategoriesMealsScreen(_availableMeals),
         AppRoutes.MEAL_DETAIL: (ctx) => MealDetailScreen(_toggleFavorite, _isFavorite),
         AppRoutes.SETTINGS: (ctx) => SettingsScreen(settings, _filterMeals),
-        AppRoutes.COSTS_DETAIL: (ctx) => CostsDetailScreen(),
-        AppRoutes.GASTOSPAGE: (ctx) => GastosPage(),
+        AppRoutes.COSTS_DETAIL: (_) => CostsDetailScreen(),
+        // AppRoutes.GASTOSPAGE: (ctx) => GastosPage(),
       },
     );
   }

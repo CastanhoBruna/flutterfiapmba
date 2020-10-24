@@ -4,7 +4,8 @@ import '../utils/app_routes.dart';
 
 
 class TransactionForm extends StatefulWidget {
-  final void Function(String, double, DateTime) onSubmit;
+
+  final void Function(String, double) onSubmit;
 
   TransactionForm(this.onSubmit);
 
@@ -13,36 +14,23 @@ class TransactionForm extends StatefulWidget {
 }
 
 class _TransactionFormState extends State<TransactionForm> {
-  final _titleController = TextEditingController();
-  final _valueController = TextEditingController();
-  DateTime _selectedDate = DateTime.now();
+    final titleController = TextEditingController();
+
+    final valueController = TextEditingController();
 
   _submitForm() {
-    final title = _titleController.text;
-    final value = double.tryParse(_valueController.text) ?? 0.0;
+    final title = titleController.text;
+    final value = double.tryParse(valueController.text) ?? 0.0;
 
-    if (title.isEmpty || value <= 0 || _selectedDate == null) {
+    // if (title.isEmpty || value <= 0 || selectedDate == null) {
+    if (title.isEmpty || value <= 0 ) {
       return;
     }
+    
+    widget.onSubmit(title, value); 
 
-    widget.onSubmit(title, value, _selectedDate);
-  }
-
-  _showDatePicker() {
-    showDatePicker(
-      context: context,
-      initialDate: DateTime.now(),
-      firstDate: DateTime(2019),
-      lastDate: DateTime.now(),
-    ).then((pickedDate) {
-      if (pickedDate == null) {
-        return;
-      }
-
-      setState(() {
-        _selectedDate = pickedDate;
-      });
-    });
+    // widget.onSubmit(title, value, selectedDate);
+    // widget.onSubmit(title, value);
   }
 
   @override
@@ -63,14 +51,14 @@ class _TransactionFormState extends State<TransactionForm> {
            SizedBox(height: 7),
 
              TextField(
-              controller: _titleController,
+              controller: titleController,
               onSubmitted: (_) => _submitForm(),
               decoration: InputDecoration(
                 labelText: 'Gasto',
               ),
             ),
             TextField(
-              controller: _valueController,
+              controller: valueController,
               keyboardType: TextInputType.numberWithOptions(decimal: true),
               onSubmitted: (_) => _submitForm(),
               decoration: InputDecoration(
@@ -81,13 +69,13 @@ class _TransactionFormState extends State<TransactionForm> {
               height: 70,
               child: Row(
                 children: <Widget>[
-                  Expanded(
-                    child: Text(
-                      _selectedDate == null
-                          ? 'Nenhuma data selecionada!'
-                          : 'Data pré-selecionada: ${DateFormat('dd/MM/y').format(_selectedDate)}',
-                    ),
-                  ),
+                  // Expanded(
+                  //   child: Text(
+                  //     selectedDate == null
+                  //         ? 'Nenhuma data selecionada!'
+                  //         : 'Data pré-selecionada: ${DateFormat('dd/MM/y').format(selectedDate)}',
+                  //   ),
+                  // ),
                   FlatButton(
                     textColor: Theme.of(context).primaryColor,
                     child: Text(
@@ -96,7 +84,7 @@ class _TransactionFormState extends State<TransactionForm> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    onPressed: _showDatePicker,
+                    // onPressed: _showDatePicker,
                   )
                 ],
               ),
@@ -109,6 +97,7 @@ class _TransactionFormState extends State<TransactionForm> {
                   child: Text('Novo gasto'),
                   color: Theme.of(context).primaryColor,
                   textColor: Theme.of(context).textTheme.button.color,
+                  // onPressed: _submitForm,
                   onPressed: _submitForm,
                   shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)
                   )
@@ -116,7 +105,6 @@ class _TransactionFormState extends State<TransactionForm> {
                 ),
               ],
             )
-
           ],
         ),
       ),
