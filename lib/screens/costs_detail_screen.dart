@@ -11,7 +11,7 @@ import 'package:intl/intl.dart';
 
 
 class CostsDetailScreen extends StatefulWidget {
-  
+
    @override
   _CostsDetailScreenState createState() => _CostsDetailScreenState();
 
@@ -42,7 +42,7 @@ class CostsDetailScreen extends StatefulWidget {
               elevation: 5,
             ),
           ),
-              TransactionList(_transactions),
+              // TransactionList(_transactions, _removeTransaction),
               
             ],
           ),
@@ -70,13 +70,12 @@ class _CostsDetailScreenState extends State<CostsDetail> {
     }).toList();
   }
 
-  // _addTransaction(String title, double value, DateTime date) {
-  _addTransaction(String title, double value) {
+  _addTransaction(String title, double value, DateTime date) {
     final newTransaction = Transaction(
       id: Random().nextDouble().toString(),
       title: title,
       value: value,
-      // date: date,
+      date: date,
     );
 
     setState(() {
@@ -96,7 +95,7 @@ class _CostsDetailScreenState extends State<CostsDetail> {
     showModalBottomSheet(
       context: context,
       builder: (_) {
-        return TransactionForm(null);
+        return TransactionForm(_addTransaction);
       },
     );
   }
@@ -111,7 +110,7 @@ class _CostsDetailScreenState extends State<CostsDetail> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Chart(_recentTransactions),
-            TransactionList(_transactions),
+            TransactionList(_transactions, _removeTransaction),
             // TransactionList(_transactions, _removeTransaction),
           ],
         ),
