@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'screens/maps_screen.dart';
 import 'screens/tabs_screen.dart';
 import 'screens/categories_meals_screen.dart';
 import 'screens/meal_detail_screen.dart';
@@ -76,6 +77,7 @@ class _MyAppState extends State<MyApp> {
         AppRoutes.MEAL_DETAIL: (ctx) => MealDetailScreen(_toggleFavorite, _isFavorite),
         AppRoutes.SETTINGS: (ctx) => SettingsScreen(settings, _filterMeals),
         AppRoutes.COSTS_DETAIL: (_) => CostsDetailScreen(),
+        AppRoutes.MAPS: (_) => MapUnitScreen(),
         // AppRoutes.GASTOSPAGE: (ctx) => GastosPage(),
       },
     );

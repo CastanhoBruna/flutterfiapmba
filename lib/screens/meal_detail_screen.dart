@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutterprojectfiap/utils/app_routes.dart';
+
+import 'maps_screen.dart';
 
 import '../models/meal.dart';
+import 'maps_screen.dart';
 
 class MealDetailScreen extends StatelessWidget {
 
@@ -71,6 +75,48 @@ class MealDetailScreen extends StatelessWidget {
                 },
               ),
             ),
+
+                RaisedButton(
+                  child: Text('+ mapa'),
+                  color: Theme.of(context).primaryColor,
+                  textColor: Theme.of(context).textTheme.button.color,
+                  // onPressed: ()=> MapUnit,  
+                  onPressed: ()=> Navigator.of(context).pushReplacementNamed(AppRoutes.MAPS),  
+                  shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)
+                  )
+                ),
+                //  itemBuilder: (BuildContext context, int index) { 
+
+          //   _createSectionTitle(context, '+ Informações'),
+          //   _createSectionContainer(
+          // // ListView.builder(
+          //       RaisedButton(
+          //         child: Text('+ mapa'),
+          //         color: Theme.of(context).primaryColor,
+          //         textColor: Theme.of(context).textTheme.button.color,
+          //         onPressed: ()=> MapUnit,  
+          //         shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)
+          //         )
+          //       ),
+          //       //  itemBuilder: (BuildContext context, int index) { 
+          //       RaisedButton(
+          //         child: Text('+ mapa'),
+          //         color: Theme.of(context).primaryColor,
+          //         textColor: Theme.of(context).textTheme.button.color,
+          //         onPressed: ()=> MapUnit,  
+          //         shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)
+          //         )
+          //       ),
+          //       //  itemBuilder: (BuildContext context, int index) { 
+      
+                  
+          //       //  },
+              
+      
+          //   // )
+
+          //   ),
+      
             _createSectionTitle(context, 'Mapa'),
             _createSectionContainer(
               ListView.builder(

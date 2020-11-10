@@ -16,6 +16,9 @@ class Meal {
   final String id;
   final List<String> categories;
   final String title;
+  final String latitude;
+  final String longitude;
+  final String location;
   final String imageUrl;
   final List<String> details;
   final List<String> steps;
@@ -41,6 +44,9 @@ class Meal {
     @required this.isVegetarian,
     @required this.complexity,
     @required this.cost,
+     this.latitude,
+   this.longitude,
+   this.location,
   });
 
   String get complexityText {

@@ -7,4 +7,5 @@ class AppRoutes {
   static const FAVORITE = '/favorite_screen';
   static const COSTS_DETAIL = '/costs';
   static const GASTOSPAGE = '/gastos';
+  static const MAPS = '/maps';
 }
