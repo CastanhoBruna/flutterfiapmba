@@ -32,7 +32,7 @@ class TransactionList extends StatelessWidget {
                         duration: Duration(milliseconds: 300),
                         curve: Curves.fastLinearToSlowEaseIn,
                     child: Image.asset(
-                      '../assets/images/costs.png',
+                      'assets/images/costs.png',
                         //                 child: Image.asset(
                         // '../assets/images/costs.png',
                         fit: BoxFit.cover,

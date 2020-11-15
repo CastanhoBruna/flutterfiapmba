@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterprojectfiap/screens/wifi_screen.dart';
 
 import 'screens/maps_screen.dart';
 import 'screens/tabs_screen.dart';
@@ -7,6 +8,7 @@ import 'screens/meal_detail_screen.dart';
 import 'screens/costs_detail_screen.dart';
 import 'screens/gastos.dart';
 import 'screens/settings_screen.dart';
+import 'screens/about_screen.dart';
 
 import 'utils/app_routes.dart';
 import 'models/meal.dart';
@@ -59,9 +61,10 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Escape Trapp',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue[100],
-        accentColor: Colors.orange[300],
+        primarySwatch: Colors.lightBlue,
+        accentColor: Colors.tealAccent,
         fontFamily: 'Raleway',
         canvasColor: Color.fromRGBO(227, 222, 216, 1),
         textTheme: ThemeData.light().textTheme.copyWith(
@@ -78,6 +81,9 @@ class _MyAppState extends State<MyApp> {
         AppRoutes.SETTINGS: (ctx) => SettingsScreen(settings, _filterMeals),
         AppRoutes.COSTS_DETAIL: (_) => CostsDetailScreen(),
         AppRoutes.MAPS: (_) => MapUnitScreen(),
+        AppRoutes.ABOUT: (_) => AboutScreen(),
+        AppRoutes.WIFI: (_) => WifiScreen(),
+
         // AppRoutes.GASTOSPAGE: (ctx) => GastosPage(),
       },
     );

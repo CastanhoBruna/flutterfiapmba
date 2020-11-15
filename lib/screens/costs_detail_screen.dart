@@ -15,50 +15,50 @@ class CostsDetailScreen extends StatefulWidget {
    @override
   _CostsDetailScreenState createState() => _CostsDetailScreenState();
 
-  @override
-  Widget build(BuildContext context) {
+  // @override
+  // Widget build(BuildContext context) {
 
-    final costs = ModalRoute.of(context).settings.arguments;
+  //   final costs = ModalRoute.of(context).settings.arguments;
   
-       final _transactions = [
-      Transaction(
-        id: "t1",
-        title: "nova compra",
-        value: 205.23,
-        date: DateTime.now(),
-         ),
-     ];
+  //      final _transactions = [
+  //     Transaction(
+  //       id: "t1",
+  //       title: "nova compra",
+  //       value: 205.23,
+  //       date: DateTime.now(),
+  //        ),
+  //    ];
 
-    return Scaffold(
-      body: SingleChildScrollView(
-              child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-          Container(
-            width: double.infinity,
-            child: Card(
-              color: Colors.blueGrey,
-              child: Text("Gráfico"),
-              elevation: 5,
-            ),
-          ),
-              // TransactionList(_transactions, _removeTransaction),
+  //   return Scaffold(
+  //     body: SingleChildScrollView(
+  //             child: Column(
+  //         crossAxisAlignment: CrossAxisAlignment.stretch,
+  //         children: <Widget>[
+  //         Container(
+  //           width: double.infinity,
+  //           child: Card(
+  //             color: Colors.blueGrey,
+  //             child: Text("Gráfico"),
+  //             elevation: 5,
+  //           ),
+  //         ),
+  //             // TransactionList(_transactions, _removeTransaction),
               
-            ],
-          ),
-        ),
-      ) ;   
+  //           ],
+  //         ),
+  //       ),
+  //     ) ;   
     
-  }
+  // }
 
 }
 
-abstract class CostsDetail implements StatefulWidget {
-  @override
-  _CostsDetailScreenState createState() => _CostsDetailScreenState();
-}
+// abstract class CostsDetail implements StatefulWidget {
+//   @override
+//   _CostsDetailScreenState createState() => _CostsDetailScreenState();
+// }
 
-class _CostsDetailScreenState extends State<CostsDetail> {
+class _CostsDetailScreenState extends State<CostsDetailScreen> {
  
   final List<Transaction> _transactions = [];
 

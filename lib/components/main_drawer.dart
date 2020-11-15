@@ -49,11 +49,11 @@ class MainDrawer extends StatelessWidget {
             'Explorar',
             () => Navigator.of(context).pushReplacementNamed(AppRoutes.HOME),
           ),
-          // _createItem(
-          //   Icons.star,
-          //   'Roteiros Favoritos',
-          //   () => Navigator.of(context).pushReplacementNamed(AppRoutes.FAVORITE),
-          // ),
+          _createItem(
+            Icons.wifi,
+            'Testar Conectividade',
+            () => Navigator.of(context).pushNamed(AppRoutes.WIFI),
+          ),
           // _createItem(
           //   Icons.settings,
           //   'Configurações',

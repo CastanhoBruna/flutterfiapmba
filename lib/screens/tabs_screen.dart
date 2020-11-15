@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterprojectfiap/screens/wifi_screen.dart';
 import 'package:flutterprojectfiap/utils/app_routes.dart';
 
 import 'categories_screen.dart';
@@ -9,7 +10,7 @@ import '../components/main_drawer.dart';
 import '../models/meal.dart';
 import '../utils/app_routes.dart';
 
-
+ 
 
 class TabsScreen extends StatefulWidget {
   final List<Meal> favoriteMeals;
@@ -53,12 +54,14 @@ class _TabsScreenState extends State<TabsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          
          actions: <Widget>[
           IconButton(icon: Icon(
-            Icons.attach_money, 
+            // Icons.attach_money, 
+            Icons.wifi, 
             ), 
-            // onPressed: ()=> print("indo pra pagina meus gastos"),
-            onPressed: ()=> CostsDetail,
+            // onPressed: ()=> print("teste connectividade "),
+            onPressed: ()=> WifiScreen,
           // onPressed: () => Navigator.of(context).pushReplacementNamed(AppRoutes.CostsDetailScreen), 
           // onPressed: () => CostsDetailScreen, 
 
@@ -79,15 +82,15 @@ class _TabsScreenState extends State<TabsScreen> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.landscape),
-            title: Text('Explorar'),
+            label: 'Explorar',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.star),
-            title: Text('Meus Roteiros'),
+            label: 'Roteiros',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_balance_wallet),
-            title: Text('Meus Gastos'),
+            label: 'Gastos',
           ),
         ],
       ),

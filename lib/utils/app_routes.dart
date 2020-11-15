@@ -8,4 +8,6 @@ class AppRoutes {
   static const COSTS_DETAIL = '/costs';
   static const GASTOSPAGE = '/gastos';
   static const MAPS = '/maps';
+  static const ABOUT = '/about_screen';
+  static const WIFI = '/wifi_screen';
 }
