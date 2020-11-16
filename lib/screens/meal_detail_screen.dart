@@ -117,25 +117,25 @@ class MealDetailScreen extends StatelessWidget {
 
           //   ),
       
-            _createSectionTitle(context, 'Mapa'),
-            _createSectionContainer(
-              ListView.builder(
-                itemCount: meal.steps.length,
-                itemBuilder: (ctx, index) {
-                  return Column(
-                    children: <Widget>[
-                      ListTile(
-                        leading: CircleAvatar(
-                          child: Text('${index + 1}'),
-                        ),
-                        title: Text(meal.steps[index]),
-                      ),
-                      Divider(),
-                    ],
-                  );
-                },
-              ),
-            ),
+            // _createSectionTitle(context, 'Mapa'),
+            // _createSectionContainer(
+            //   ListView.builder(
+            //     itemCount: meal.steps.length,
+            //     itemBuilder: (ctx, index) {
+            //       return Column(
+            //         children: <Widget>[
+            //           ListTile(
+            //             leading: CircleAvatar(
+            //               child: Text('${index + 1}'),
+            //             ),
+            //             title: Text(meal.steps[index]),
+            //           ),
+            //           Divider(),
+            //         ],
+            //       );
+            //     },
+            //   ),
+            // ),
           ],
         ),
       ),

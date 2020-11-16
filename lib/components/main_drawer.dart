@@ -54,10 +54,15 @@ class MainDrawer extends StatelessWidget {
             'Testar Conectividade',
             () => Navigator.of(context).pushNamed(AppRoutes.WIFI),
           ),
+          _createItem(
+            Icons.local_fire_department,
+            'Testar conexão Firebase',
+            () => Navigator.of(context).pushNamed(AppRoutes.FIREBASE),
+          ),
           // _createItem(
-          //   Icons.settings,
-          //   'Configurações',
-          //   () => Navigator.of(context).pushReplacementNamed(AppRoutes.SETTINGS),
+          //   Icons.contact_mail,
+          //   'Testar Push notification Firebase',
+          //   () => Navigator.of(context).pushNamed(AppRoutes.PUSH),
           // ),
           // _createItem(
           //   Icons.account_balance_wallet,

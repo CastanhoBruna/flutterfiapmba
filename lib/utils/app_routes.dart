@@ -10,4 +10,6 @@ class AppRoutes {
   static const MAPS = '/maps';
   static const ABOUT = '/about_screen';
   static const WIFI = '/wifi_screen';
+  static const FIREBASE = '/firebase_screen';
+  // static const PUSH = '/push_notifications_screen';
 }

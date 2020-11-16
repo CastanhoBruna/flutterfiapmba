@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutterprojectfiap/screens/firebasetest_screen.dart';
+import 'package:flutterprojectfiap/screens/push_notifications_screen.dart';
 import 'package:flutterprojectfiap/screens/wifi_screen.dart';
 
 import 'screens/maps_screen.dart';
@@ -15,6 +17,13 @@ import 'models/meal.dart';
 import 'models/settings.dart';
 import 'data/dummy_data.dart';
 
+// import 'dart:io';
+// import 'dart:async';
+// import 'package:firebase_messaging/firebase_messaging.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart';
+
+
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
@@ -23,7 +32,15 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  // GastosPage gastospage = GastosPage(); 
+  @override
+
+
+  void initState() {
+    PushNotificationsManager firebaseMessaging = new PushNotificationsManager();
+    firebaseMessaging.init();
+
+  }
+
   Settings settings = Settings();
   List<Meal> _availableMeals = DUMMY_MEALS;
   List<Meal> _favoriteMeals = [];
@@ -69,23 +86,41 @@ class _MyAppState extends State<MyApp> {
         canvasColor: Color.fromRGBO(227, 222, 216, 1),
         textTheme: ThemeData.light().textTheme.copyWith(
               headline6: TextStyle(
-                fontSize: 20,
+                fontSize: 18,
                 fontFamily: 'RobotoCondensed',
               ),
             ),
       ),
       routes: {
         AppRoutes.HOME: (ctx) => TabsScreen(_favoriteMeals),
-        AppRoutes.CATEGORIES_MEALS: (ctx) => CategoriesMealsScreen(_availableMeals),
-        AppRoutes.MEAL_DETAIL: (ctx) => MealDetailScreen(_toggleFavorite, _isFavorite),
+        AppRoutes.CATEGORIES_MEALS: (ctx) =>
+            CategoriesMealsScreen(_availableMeals),
+        AppRoutes.MEAL_DETAIL: (ctx) =>
+            MealDetailScreen(_toggleFavorite, _isFavorite),
         AppRoutes.SETTINGS: (ctx) => SettingsScreen(settings, _filterMeals),
         AppRoutes.COSTS_DETAIL: (_) => CostsDetailScreen(),
         AppRoutes.MAPS: (_) => MapUnitScreen(),
         AppRoutes.ABOUT: (_) => AboutScreen(),
         AppRoutes.WIFI: (_) => WifiScreen(),
-
-        // AppRoutes.GASTOSPAGE: (ctx) => GastosPage(),
+        AppRoutes.FIREBASE: (_) => FirebaseScreen(),
+        // AppRoutes.PUSH: (_) => PushNotificationScreen(),
       },
     );
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 }

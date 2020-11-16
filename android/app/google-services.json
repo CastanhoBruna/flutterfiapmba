@@ -1,71 +1,34 @@
 {
   "project_info": {
-    "project_number": "885998490456",
-    "firebase_url": "https://projetoflutterfiapteam.firebaseio.com",
-    "project_id": "projetoflutterfiapteam",
-    "storage_bucket": "projetoflutterfiapteam.appspot.com"
+    "project_number": "1063003058885",
+    "firebase_url": "https://flutter-proj2.firebaseio.com",
+    "project_id": "flutter-proj2",
+    "storage_bucket": "flutter-proj2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:885998490456:android:33208b9c6790a51543cb2d",
+        "mobilesdk_app_id": "1:1063003058885:android:9c0e3f71f2ff22dca2f6ac",
         "android_client_info": {
           "package_name": "br.com.flutterfiapproj.flutter"
         }
       },
       "oauth_client": [
         {
-          "client_id": "885998490456-qm8v1asjgl0thhhmu6qm63df7p28m4vp.apps.googleusercontent.com",
+          "client_id": "1063003058885-e0bbr5a29qusq7a9oe83r45rg6tu3b8e.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBpa-6za7MGTLPbupVk7NsuNVhwO3HVp5g"
+          "current_key": "AIzaSyBy0aGUZ4TNU-VlgmafXNPtuK_LI79YBwc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "885998490456-qm8v1asjgl0thhhmu6qm63df7p28m4vp.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:885998490456:android:e8498d3d6f6d43e243cb2d",
-        "android_client_info": {
-          "package_name": "br.com.projetofiapflutterteam.projetofiapflutterteam"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "885998490456-budpscmmsf01tctpk82tl98lkt16finv.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "br.com.projetofiapflutterteam.projetofiapflutterteam",
-            "certificate_hash": "a289cb7e8c5ec15e8ca93c0523290f144fccbd0c"
-          }
-        },
-        {
-          "client_id": "885998490456-qm8v1asjgl0thhhmu6qm63df7p28m4vp.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBpa-6za7MGTLPbupVk7NsuNVhwO3HVp5g"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "885998490456-qm8v1asjgl0thhhmu6qm63df7p28m4vp.apps.googleusercontent.com",
+              "client_id": "1063003058885-e0bbr5a29qusq7a9oe83r45rg6tu3b8e.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
